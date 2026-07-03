@@ -1,8 +1,8 @@
 from person import Person
 
 class customer(Person):
-    def __init__(self, id, first_name, last_name, phone, email, customer_id, loyalty_points, purchase_history):
-        super().__init__(id, first_name, last_name, phone, email)
+    def __init__(self, first_name, last_name, phone, email, customer_id, loyalty_points, purchase_history):
+        super().__init__( first_name, last_name, phone, email)
         self.customer_id = customer_id
         self.loyalty_points = loyalty_points
         self.purchase_history = purchase_history

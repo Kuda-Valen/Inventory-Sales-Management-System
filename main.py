@@ -28,3 +28,6 @@ def main_menu():
         
         except ValueError as e:
             print(f"Invalid input! Error that occured: {e}")
+
+
+main_menu()
