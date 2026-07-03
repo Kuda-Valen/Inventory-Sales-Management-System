@@ -32,6 +32,16 @@ CREATE TABLE IF NOT EXISTS employees (
 );
 """)
 
+# Extension table specifically for Customers
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS customers (
+    person_id INTEGER PRIMARY KEY,
+    loyalty_points INTEGER DEFAULT 0 NOT NULL,
+    FOREIGN KEY (person_id) REFERENCES persons(id) ON DELETE CASCADE
+);
+""")
+
+
 conn.commit()
 conn.close()
 

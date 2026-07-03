@@ -1,11 +1,10 @@
-from person import Person
+from models.person import Person
 
-class customer(Person):
-    def __init__(self, first_name, last_name, phone, email, customer_id, loyalty_points, purchase_history):
+class Customer(Person):
+    def __init__(self, first_name, last_name, phone, email):
         super().__init__( first_name, last_name, phone, email)
-        self.customer_id = customer_id
-        self.loyalty_points = loyalty_points
-        self.purchase_history = purchase_history
+        self.loyalty_points = 0
+        self.purchase_history = None
 
     def buy_product(self):
         print("this feature is coming soon!")

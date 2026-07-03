@@ -57,7 +57,7 @@ def authenticate() -> Employee | None:
         print(f"\nWelcome back, {employee.first_name}! Logged in as '{employee.role}'")
         return employee
     else:
-        print("Authentication Failed: Invalid Password.")
+        print("\nAuthentication Failed: Invalid Password.")
         return None
 
     
