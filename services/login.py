@@ -54,7 +54,7 @@ def authenticate() -> Employee | None:
     input_hash = hashlib.sha256(password.encode()).hexdigest()
 
     if input_hash == employee.hashed_password:
-        print(f"\nWelcome back, {employee.first_name}! Logged in as '{employee.role}'")
+        #print(f"\nWelcome back, {employee.first_name}! Logged in as '{employee.role}'")
         return employee
     else:
         print("\nAuthentication Failed: Invalid Password.")
