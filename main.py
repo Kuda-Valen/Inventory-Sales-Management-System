@@ -17,9 +17,11 @@ def main_menu():
             if option == 1:
                 employee = authenticate()
                 if employee.role == "Manager":
+                    print(f"\n--Welcome Back {employee.first_name} --\n")
                     manager_menu()
                 
                 else:
+                    print(f"\n-- Welcome Back {employee.first_name} --\n")
                     cashier_menu()
 
             
