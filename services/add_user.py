@@ -132,7 +132,7 @@ def save_customer_to_sql(customer: Customer):
                 """
                 INSERT INTO customers (person_id, loyalty_points) VALUES (?, ?);
             """,
-            (generated_person_id, getattr(customer, 'loyalty_points', 0))
+            (generated_person_id, getattr(customer, 'loyalty_points', 0));
             )
             
         print(f"Customer '{customer.first_name}' successfully added with System ID: {generated_person_id}")
