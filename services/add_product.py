@@ -17,13 +17,15 @@ def save_to_sql(product: Product):
     cursor = conn.cursor()
 
     with conn:
+        generated_product_id = cursor.lastrowid
         cursor.execute(
-            
             """
             INSERT INTO products (name, cost_price, selling_price, stock, supplier_name) VALUES (?, ?, ?, ?, ?);
         """,
         ( product.name, product.cost_price, product.selling_price, product.stock, product.supplier_name)
         )
+    print(f"\nProduct {product.name} has been added with product ID: {generated_product_id}")
 
+    conn.close()
         
 
