@@ -27,5 +27,7 @@ def save_to_sql(product: Product):
     print(f"\nProduct {product.name} has been added with product ID: {generated_product_id}")
 
     conn.close()
+    # this is where we stopped
+    
         
 
