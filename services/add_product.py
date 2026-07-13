@@ -4,7 +4,7 @@ from models.product import Product
 def add_product():
     print("\n-- Add Product --\n")
     name = input("Enter Product Name: ").strip()
-    cost_price = ("Enter Product Cost Price Per Item: ").strip()
+    cost_price = input("Enter Product Cost Price Per Item: ").strip()
     selling_price = input("Enter Selling Price Per Item: ").strip()
     stock = int(input("Enter Number of Items: "))
     supplier_name = input("Enter Supplier Name: ").strip()
@@ -28,6 +28,6 @@ def save_to_sql(product: Product):
 
     conn.close()
     # this is where we stopped
-    
+                                                                                                                                       
         
 
